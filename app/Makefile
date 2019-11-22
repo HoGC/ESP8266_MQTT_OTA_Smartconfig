@@ -22,9 +22,9 @@ GEN_IMAGES= eagle.app.v6.out
 GEN_BINS= eagle.app.v6.bin
 SPECIAL_MKTARGETS=$(APP_MKTARGETS)
 SUBDIRS=    \
-	user    \
+	user	\
+	driver	\
 	mqtt   \
-	modules  
 
 endif # } PDIR
 
@@ -48,9 +48,9 @@ ifeq ($(FLAVOR),release)
 endif
 
 COMPONENTS_eagle.app.v6 = \
-	user/libuser.a  \
+	user/libuser.a	\
+	driver/libdriver.a	\
 	mqtt/libmqtt.a  \
-	modules/libmodules.a
 
 LINKFLAGS_eagle.app.v6 = \
 	-L../lib        \
@@ -99,8 +99,7 @@ DEPENDS_eagle.app.v6 = \
 #	-DTXRX_TXBUF_DEBUG
 #	-DTXRX_RXBUF_DEBUG
 #	-DWLAN_CONFIG_CCX
-CONFIGURATION_DEFINES =	-DICACHE_FLASH \
-                        -DGLOBAL_DEBUG_ON
+CONFIGURATION_DEFINES =	-DICACHE_FLASH
 
 DEFINES +=				\
 	$(UNIVERSAL_TARGET_DEFINES)	\
@@ -123,7 +122,7 @@ DDEFINES +=				\
 # Required for each makefile to inherit from the parent
 #
 
-INCLUDES := $(INCLUDES) -I $(PDIR)include -I $(PDIR)include/mqtt -I $(PDIR)include/modules
+INCLUDES := $(INCLUDES) -I $(PDIR)include -I $(PDIR)include/mqtt
 PDIR := ../$(PDIR)
 sinclude $(PDIR)Makefile
 

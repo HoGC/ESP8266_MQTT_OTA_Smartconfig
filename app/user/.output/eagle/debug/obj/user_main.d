@@ -1,8 +1,4 @@
-.output/eagle/debug/obj/user_main.o .output/eagle/debug/obj/user_main.d : user_main.c ../../include/ets_sys.h ../../include/c_types.h \
- ../../include/eagle_soc.h ../../include/os_type.h \
- ../../include/ets_sys.h ../../include/c_types.h ../include/driver/uart.h \
- ../include/driver/uart_register.h ../../include/eagle_soc.h \
- ../../include/osapi.h \
+.output/eagle/debug/obj/user_main.o .output/eagle/debug/obj/user_main.d : user_main.c ../../include/osapi.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/string.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/_ansi.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/newlib.h \
@@ -19,20 +15,25 @@
  /opt/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.2/include/stddef.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/cdefs.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/string.h \
- ../../include/os_type.h ../include/user_config.h ../include/mqtt/mqtt.h \
- ../include/mqtt_config.h ../include/mqtt/mqtt_msg.h \
+ ../../include/os_type.h ../../include/ets_sys.h ../../include/c_types.h \
+ ../../include/eagle_soc.h ../include/user_config.h ../../include/mem.h \
  ../../include/user_interface.h ../../include/ip_addr.h \
  ../../include/queue.h ../../include/spi_flash.h ../../include/gpio.h \
- ../include/mqtt/queue.h ../include/mqtt/ringbuf.h \
+ ../include/mqtt/mqtt.h ../include/mqtt_config.h \
+ ../include/mqtt/mqtt_msg.h ../../include/c_types.h \
+ ../include/mqtt/queue.h ../../include/os_type.h \
+ ../include/mqtt/ringbuf.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/stdlib.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/stdlib.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/alloca.h \
- ../include/mqtt/typedef.h ../include/modules/wifi.h ../../include/mem.h \
- ../../include/gpio.h ../include/modules/gpio_key.h \
+ ../include/mqtt/typedef.h ../include/driver/ota.h \
+ ../../include/upgrade.h ../include/driver/data.h \
+ ../include/driver/uart.h ../include/driver/uart_register.h \
+ ../../include/eagle_soc.h ../include/driver/wifi.h \
+ ../../include/ets_sys.h ../include/driver/gpio_key.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/stdio.h \
  /opt/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/4.8.2/include/stdarg.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/types.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/machine/types.h \
  /opt/xtensa-lx106-elf/xtensa-lx106-elf/include/sys/stdio.h \
- ../include/modules/data.h ../include/modules/ota.h \
- ../../include/upgrade.h ../../include/smartconfig.h
+ ../../include/gpio.h

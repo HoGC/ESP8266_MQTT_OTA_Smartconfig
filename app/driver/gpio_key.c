@@ -2,7 +2,7 @@
  * gpio_key driver
  * Author: HoGC 
  */
-#include "gpio_key.h"
+#include "driver/gpio_key.h"
 #include "mem.h"
 
 //#define GPIO_KEY_DEBUG_ON

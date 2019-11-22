@@ -1,10 +1,3 @@
-/*
- * data.h
- *
- *  Created on: 2019��3��12��
- *      Author: G
- */
-
 #ifndef _DATA_H_
 #define _DATA_H_
 

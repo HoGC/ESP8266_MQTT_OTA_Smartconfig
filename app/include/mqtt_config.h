@@ -3,10 +3,10 @@
 
 /*DEFAULT CONFIGURATIONS*/
 
-#define MQTT_HOST			"0.0.0.0"       //ip or "mqtt.yourdomain.com"
+#define MQTT_HOST			"0.0.0.0"       //HOST or "mqtt.yourdomain.com"
 #define MQTT_PORT			1883
 #define MQTT_BUF_SIZE		1024
-#define MQTT_KEEPALIVE		30	            /*second*/
+#define MQTT_KEEPALIVE		120	            /*second*/
 
 #define MQTT_USER			""
 #define MQTT_PASS			""
@@ -15,6 +15,7 @@
 #define LWT_TOPIC           "/lwt/%s"
 #define BIRTH_TOPIC         "/birth/%s"
 
+#define BIRTH_MESSAGE         "online"
 #define LWT_MESSAGE         "offline"
 
 #define MQTT_RECONNECT_TIMEOUT 	5	        /*second*/
