@@ -151,11 +151,6 @@ void mqttDataCb(uint32_t *args, const char* topic, uint32_t topic_len,
 	os_free(dataBuf);
 }
 
-void ICACHE_FLASH_ATTR connect_mqtt(void){
-    INFO("connect_mqtt\n");
-    MQTT_Connect(&mqttClient);
-}
-
 /**
  * 	MQTT初始化
  */
@@ -242,13 +237,9 @@ void ICACHE_FLASH_ATTR user_init(void)
 	set_uart_cb(uart_cb);
 
     get_mac();
-
-	wifi_set_opmode(STATION_MODE); 
-	//设置wifi信息存储数量
-	wifi_station_ap_number_set(2);
-
 	keyInit();
     mqtt_init();
 
+	wifi_set_opmode(STATION_MODE); 
 	set_wifistate_cb(wifi_connect_cb, wifi_disconnect_cb);
 }
