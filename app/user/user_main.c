@@ -84,7 +84,7 @@ void ICACHE_FLASH_ATTR get_mac(void) {
 	u8 mac[6];
 	wifi_get_macaddr(STATION_IF, mac);
 	HexToStr(mac_str, mac, 6, 1);
-	INFO("mac:%s\n", mac_str);
+	INFO("\nmac:%s\n", mac_str);
 
 	os_sprintf(ota_topic,OTA_TOPIC,mac_str);
 	os_sprintf(lwt_topic,LWT_TOPIC,mac_str);
@@ -173,14 +173,13 @@ void ICACHE_FLASH_ATTR smartconfig_cd(sm_status status){
 	switch (status)
 	{
 		case SM_STATUS_FINISH:
-			INFO("smartconfig_finish");
+			INFO("smartconfig_finish\n");
 			break;
-	
 		case SM_STATUS_GETINFO:
-			INFO("wifiinfo_error");
+			INFO("wifiinfo_error\n");
 			break;
 		case SM_STATUS_TIMEOUT:
-			INFO("smartconfig_timeout");
+			INFO("smartconfig_timeout\n");
 			break;
 	}
 }
@@ -202,7 +201,7 @@ LOCAL void ICACHE_FLASH_ATTR keyInit(void) {
 	//设置按键数量
 	set_key_num(1);
 	//长按、短按的按键回调
-	key_add(D5, NULL, key1ShortPress);
+	key_add(D2, NULL, key1ShortPress);
 
 }
 /**
@@ -240,6 +239,6 @@ void ICACHE_FLASH_ATTR user_init(void)
 	keyInit();
     mqtt_init();
 
-	wifi_set_opmode(STATION_MODE); 
+	wifi_set_opmode(STATION_MODE);
 	set_wifistate_cb(wifi_connect_cb, wifi_disconnect_cb);
 }
