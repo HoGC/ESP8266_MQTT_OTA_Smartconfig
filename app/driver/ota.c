@@ -261,7 +261,7 @@ uint8 ICACHE_FLASH_ATTR updata_status_check(void) {
             break;
         default:
 			upgrade_status_flash = 124;
-            return;
+            break;
     }
 
 	flash_ret = spi_flash_read(upgrade_status_flash * SPI_FLASH_SEC_SIZE, (uint32 *) &updata_status, 4);
